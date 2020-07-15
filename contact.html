@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evas Projekt</title>
+    <link href="tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+         height: 100%;
+         margin: 0;
+         padding: 0; 
+         background-image: url("img/blue-water-wallpaper.jpg");
+         background-color: lightseagreen;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+        }
+        @font-face {
+         font-family: myFont;
+         src: url(RockSalt-Regular.ttf);
+        }
+        h1 {
+         font-family: myFont;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- The Content -->
+    <div id="content" class="w-full h-full min-h-screen">
+        
+      <!--The Navigation-->
+      <nav class="lg:h-24 flex items-center justify-between flex-wrap bg-gray-700 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-10 lg:h-8">
+          <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+          <span class="font-semibold text-2xl tracking-tight"><a href="index.html">Travel Blog</a></a></span>
+        </div>
+          
+        <div class="sm:ml-0 w-full flex-grow lg:flex block lg:items-center lg:w-40 lg:h-8">
+          <div class="text-base lg:flex-grow">
+            <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-8">
+              Map
+            </a>
+            <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-8">
+              Contact
+            </a>
+          </div>
+  
+          <div class="text-base block lg:flex lg:items-center">
+            <div id="restricted" class="block mt-2 mb-2 lg:mb-4">
+            </div>  
+            <button id="restrictedBtn" onclick="window.location.href = 'login.html';" class="inline-block mt-4 lg:mt-0 mr-2 mb-1 lg:mb-0 px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white">
+              Login
+            </button>
+          </div>  
+        </div>
+      </nav> 
+
+      <!--The Contactbox-->
+      <div class="container mx-auto max-w-sm rounded-md overflow-hidden shadow-lg justify-center bg-yellow-300 my-8 mb-4">
+        <div class="p-6">
+          <h1 class="font-bold text-2xl mb-2">Contact</h1>
+          <p class="text-gray-700 text-base">
+            Welcome to my Travel Blog. This is a selection of places I have been in the last few years. 
+            Surf the map, click on places you are interested in, and read about my impressions. 
+            I hope you enjoy this tour du monde from the comfort of your screen.</p>
+        </div>
+        <div class="px-6 py-0">
+          <p class="text-gray-700 text-base">
+            Name: Eva Dressel <br>
+            School: Hamburg Coding School <br>
+            Address: Borselstraße 7, 22765 Hamburg<br>
+            Email: eva@hamburgcodingschool.com <br>
+            WhatsApp: +56 9 5736 8975
+          </p>
+        </div>
+        <div class="px-6 py-6">
+          <p class="text-gray-700 text-base">
+            I created this project as part of a training course at Hamburg Coding School.
+          </p>
+        </div>   
+      </div>
+
+      <p class="text-center text-gray-700 text-xs mb-4">
+        &copy;2020 Eva Dressel. All rights reserved.
+      </p>
+    </div>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+  <script type="module" src="env.js"></script>
+  <script type="module" src="contact.js"></script>
+  
+  
+</body>
+</html>

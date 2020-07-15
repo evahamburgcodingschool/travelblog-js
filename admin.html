@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evas Project</title>
+    <link href="tailwind.min.css" rel="stylesheet">
+    <style>
+      body {
+       height: 100%;
+       margin: 0;
+       padding: 0; 
+       background-image: url("img/blue-water-wallpaper.jpg");
+       background-color: lightseagreen;
+       background-position: center;
+       background-repeat: repeat;
+       background-size: cover;
+      }
+      @font-face {
+       font-family: myFont;
+       src: url(RockSalt-Regular.ttf);
+      }
+      h1 {
+       font-family: myFont;
+      }
+  </style>
+</head>
+<body>
+  <div class="w-full h-full min-h-screen">
+        
+    <!--The Navigation-->
+    <nav class="lg:h-24 flex items-center justify-between flex-wrap bg-gray-700 p-6">
+      <div class="flex items-center flex-shrink-0 text-white mr-10 lg:h-8">
+        <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+        <span class="font-semibold text-2xl tracking-tight"><a href="index.html">Travel Blog</a></a></span>
+      </div>
+        
+      <div class="sm:ml-0 w-full flex-grow lg:flex block lg:items-center lg:w-40 lg:h-8">
+        <div class="text-base lg:flex-grow">
+          <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-8">
+            Map
+          </a>
+          <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-8">
+            Contact
+          </a>
+        </div>
+
+        <div class="text-base block lg:flex lg:items-center">
+          <div id="restricted" class="block mt-2 mb-2 lg:mb-4">
+          </div>  
+          <button id="restrictedBtn" onclick="window.location.href = 'login.html';" class="inline-block mt-4 lg:mt-0 mr-2 mb-1 lg:mb-0 px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white">
+            Login
+          </button>
+        </div>  
+      </div>
+    </nav>
+    
+    
+    
+    <!--<img id="myimg"> -->
+    <!-- A Form -->
+    <div class="w-full h-full  mx-auto max-w-sm mt-8">
+      <form id="newPostForm" class="bg-yellow-300 shadow-lg rounded-md p-8">
+        <h1 class="mx-auto font-bold text-2xl mx-4 mb-4">New Post</h1>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+            Title
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Title">
+        </div>
+        <div class="-mb-2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="text">
+            Text
+          </label>
+          <textarea id="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="text" rows="4" maxlength= "160" placeholder="What fascintated you about this place?"></textarea>
+          <div id="textCounter" class="text-gray-700 text-xs italic text-right">120/120</div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="image">
+            Image
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="image" placeholder="img/Cityname.jpg">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="city">
+            City
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="city" type="text" placeholder="City">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="country">
+            Country
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="country" type="text" placeholder="Country">
+        </div>
+
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="coordinates-lat">
+              Latitude
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="coordinates-lat" type="number" min="-90" max="90" step=".000001" placeholder="53.651920">
+          </div>
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="coordinates-lng">
+              Longitude
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="coordinates-lng" type="number" min="-180" max="180" step=".000001" placeholder="9.817860">
+          </div>
+        </div>
+
+        <div class="flex content-center">
+          <button id="myBtn" class="bg-teal-400 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+            Post
+          </button>
+          <div id="btnDisabled" class="my-auto ml-3 text-red-500 text-xs italic text-right"> 
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="content" class="mx-auto max-w-sm"></div>
+  
+  </div>
+  <p class="text-center text-gray-700 text-xs mt-4 mb-4">
+    &copy;2020 Eva Dressel. All rights reserved.
+  </p>
+
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-storage.js"></script>
+  <script type="module" src="contact.js"></script>
+  <script type="module" src="env.js"></script>
+  <script type="module" src="admin.js"></script>
+  <script type="module" src="posts.js"></script>
+</body>
+</html>

@@ -1,5 +1,1 @@
-# travelblog-js
-# travelblog-js
-# travelblog
-# travelblog
-# travelblog-js
+# a small project in HTML, CSS and JavaScript
